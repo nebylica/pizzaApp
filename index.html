@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pizza</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="welcome-container">
+            <img class="welcome-image" src="./style/images/pizza_main_image.png" alt="pizza_main_image">
+            <div class="button-box">
+                <div id="addBtn">
+                    <div class="button">Add Pizza</div>
+                    <div class="button-hover w-125"></div>
+                </div>
+                <div id="menuBtn">
+                    <div class="button">Menu</div>
+                    <div class="button-hover w-70"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form>
+                <section class="input-field">
+                    <label for="name" class="form-name">Write pizza name</label><br>
+                    <input type="text" name="name" id="name" maxlength="30" required>
+                </section>
+
+                <section class="input-field">
+                    <label for="price" class="form-name">Enter pizza price, Eur</label><br>
+                    <input type="number" name="price" id="price" min="0" step=".01" required>
+                </section>
+
+                <section class="slide-box">
+                    <label for="heat" class="form-name">Is your pizza hot?</label><br>
+                    <span>Mild</span>
+                    <input type="range" name="heat" id="heat" value="1" min="1" max="3" class="slider">
+                    <span>Hot</span>
+                </section>
+
+                <section class="input-field">
+                    <label for="topping" class="form-name">Write toppings (by one)</label><br>
+                    <div>
+                        <input type="text" name="topping" id="topping" >
+                        <div id="add-topping" class="topping-btn">Add</div>
+                    </div>
+                    <ul id="show-toppings"></ul>
+                </section>
+
+                <section>
+                    <div id="select-photo" class="photo-container">
+                        <div class="photo-box">
+                            <img src="./style/images/pizza_0.jpeg" alt="pizza_0">
+                        </div>
+                        <div class="photo-box">
+                            <img src="./style/images/pizza_1.jpeg" alt="pizza_1">
+                        </div>
+                        <div class="photo-box">
+                            <img src="./style/images/pizza_2.jpeg" alt="pizza_2">
+                        </div>
+                        <div class="photo-box">
+                            <img src="./style/images/pizza_3.jpeg" alt="pizza_3">
+                        </div>
+                        <div class="photo-box">
+                            <img src="./style/images/pizza_4.jpeg" alt="pizza_4">
+                        </div>
+                        <div class="photo-box">
+                            <img src="./style/images/pizza_5.jpeg" alt="pizza_5">
+                        </div>
+                    </div>
+                </section>
+            </form>
+
+            <p id="errorMessage"></p>
+
+            <div class="button-box">
+                <div id="submit">
+                    <div class="button">Submit</div>
+                    <div class="button-hover w-90"></div>
+                </div>
+                <div id="form-back">
+                    <div class="button">Main</div>
+                    <div class="button-hover w-70"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-title-box">
+                <div class="menu-title">Menu</div>
+                <div class="sort-box">
+                    Sort by:
+                    <span id="sort-by-name" class="sort-type">name</span>
+                    <span>|</span>
+                    <span id="sort-by-price" class="sort-type">price</span>
+                    <span>|</span>
+                    <span id="sort-by-heat" class="sort-type">heat</span>
+                </div>
+            </div>
+
+            <div id="menu-list" class="menu-list"></div>
+
+            <div class="button-box">
+                <div id="menu-back">
+                    <div class="button">Main</div>
+                    <div class="button-hover w-70"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="delete-modal">
+            <div class="delete-box">
+                <p>Are you sure you want to delete pizza from the menu?</p>
+                <div class="button-box">
+                    <div id="yes">
+                        <div class="button">Yes</div>
+                        <div class="button-hover w-40"></div>
+                    </div>
+                    <div id="no">
+                        <div class="button">No</div>
+                        <div class="button-hover w-40"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

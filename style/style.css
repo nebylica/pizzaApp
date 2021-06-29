@@ -1,0 +1,458 @@
+/*Main parameters*/
+
+:root {
+    --red: #f67171;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #f3f3f3;
+}
+
+.main-container {
+    width: 80vw;
+    min-height: 80vh;
+    padding: 10vh 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.w-125 {
+    width: 125px;
+}
+
+.w-70 {
+    width: 70px;
+}
+
+.w-90 {
+    width: 90px;
+}
+
+.w-40 {
+    width: 40px;
+}
+
+/*Buttons*/
+
+.button-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-box > div {
+    position: relative;
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.button-box:hover .button {
+    text-shadow: 2px 2px #f3f3f3;
+}
+
+.button-hover {
+    height: 25px;
+    background-color: var(--red);
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.button-box > div:hover .button-hover {
+    opacity: 0.7;
+}
+
+.delete-btn {
+    font-size: 14px; !important;
+}
+
+.delete-hover {
+    height: 20px; !important;
+}
+
+/*Welcome window*/
+
+.welcome-container {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-image {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/*Form window*/
+
+.form-container {
+    width: 400px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.form-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+input:focus {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.input-field input {
+    width: 380px;
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.input-field input:hover {
+    border-bottom: 2px solid var(--red);
+    border-right: 2px solid var(--red);
+}
+
+.input-field input:focus {
+    border-bottom: 2px solid var(--red);
+    border-right: 2px solid var(--red);
+}
+
+.slide-box {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 10px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background-image: url('./images/hot-pepper.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background-image: url('./images/hot-pepper.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.input-field > div {
+    position: relative;
+}
+
+.topping-btn {
+    height: 36px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    z-index: 1;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.topping-btn:hover {
+    background-color: var(--red);
+    text-shadow: 2px 2px #f3f3f3;
+}
+
+.photo-container {
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+
+.photo-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.photo-box:hover {
+    border: 2px solid var(--red);
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.photo-box img:hover {
+    transform: scale(1.05);
+}
+
+.select-photo-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--red);
+}
+
+.select-photo-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+#errorMessage {
+    text-align: center;
+    color: var(--red);
+}
+
+/*Menu window*/
+
+.menu-container {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-title-box {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.sort-box {
+    font-size: 14px;
+}
+
+.sort-type {
+    margin: 0 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.sort-type:hover {
+    color: var(--red);
+}
+
+.menu-list {
+    height: auto;
+    margin: 100px 0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3, 260px);
+    grid-gap: 40px;
+}
+
+.empty-list {
+    grid-column: 2;
+    margin: 100px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.card-title-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-title {
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    overflow-wrap: break-word;
+}
+
+.card-pepper {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card-pepper img {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+}
+
+.card-text {
+    color: #626262;
+    text-align: justify;
+}
+
+/*Delete modal*/
+
+.delete-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.delete-box {
+    width: 300px;
+    height: auto;
+    padding: 40px 60px;
+    background-color: #f3f3f3;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/*Media*/
+
+@media only screen and (max-width: 900px) {
+
+    .menu-title-box {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-title {
+        margin-bottom: 20px;
+    }
+
+    .empty-list {
+        grid-column: 1/3;
+    }
+
+    .menu-list {
+        grid-template-columns: repeat(2, 260px);
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .main-container {
+        width: 90vw;
+        padding: 10vh 5vw;
+    }
+
+    .welcome-container {
+        width: 280px;
+    }
+
+    .form-container {
+        width: 280px;
+    }
+
+    .input-field input {
+        width: 258px;
+    }
+
+    .slider {
+        width: 60%;
+    }
+
+    .photo-container {
+        grid-auto-rows: 130px;
+    }
+
+    .empty-list {
+        grid-column: 1;
+    }
+
+    .menu-list {
+        grid-template-columns: 260px;
+    }
+}
+
